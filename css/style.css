@@ -56,11 +56,28 @@ body {
 }
 
 .navigation-link {
+    position: relative;
     text-decoration: none;
     font-size: 18px;
     line-height: 21px;
     color: #363636;
     margin-right: 18px;
+}
+
+.navigation-link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.navigation-link:hover:after {
+    transform: scaleX(1);
 }
 
 .button-group {
@@ -106,13 +123,6 @@ body {
     /*align-items: center;*/
 }
 
-.navigation{
-    display: flex;
-    margin: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .mobile-buttons {
     display: none;
 }
@@ -367,10 +377,9 @@ body {
     margin-top: 14px;
 }
 
-button-next {
+.button-next {
     display: none;
     background-color: transparent;
-    border: none;
     position: absolute;
     right: 0;
     top: 50%;
@@ -402,6 +411,10 @@ button-next {
 
     .navigation {
         margin-right: 20px;
+    }
+    .navigation-link {
+        margin-right: 10px;
+        font-size: 16px;
     }
 
     .search-input {
@@ -477,21 +490,45 @@ button-next {
     }
 
     .m-menu {
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         position: fixed;
         left: 0;
+        top: 68px;
         right: 0;
-        top: 0;
         bottom: 0;
+        height: calc(100% - 68px);
         background: #5671F6;
+
     }
-.button-group{
-    height: auto;
-    flex-direction: column;
-}
+
+    .m-menu.active {
+        display: flex;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .navigation-link {
+        color: #fff;
+        margin-right: 0;
+        margin-bottom: 18px;
+    }
+    .navigation-link:last-child {
+        margin-bottom: 0;
+    }
+
+    .button-group {
+        height: auto;
+        flex-direction: column;
+    }
+
     .film {
         padding-top: 50px;
         padding-bottom: 60px;
@@ -536,6 +573,7 @@ button-next {
         padding-right: 2.5%;
         padding-left: 2.5%;
     }
+
     .button-next {
         display: block;
         border: none;
