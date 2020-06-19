@@ -111,17 +111,13 @@ body {
     padding-left: 50px;
 }
 
-.m-menu-button {
-    /*width: 20px;*/
-    /*height: 20px;*/
+.m-menu-button, .search-button {
     padding: 5px;
     background-color: #fff;
     border: none;
     cursor: pointer;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
 }
+
 
 .mobile-buttons {
     display: none;
@@ -135,13 +131,6 @@ body {
     margin-top: 2px;
     margin-bottom: 2px;
     flex-basis: 16px;
-}
-
-.search-button {
-    background-color: #fff;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
 }
 
 .container {
@@ -412,6 +401,7 @@ body {
     .navigation {
         margin-right: 20px;
     }
+
     .navigation-link {
         margin-right: 10px;
         font-size: 16px;
@@ -515,11 +505,13 @@ body {
         align-items: center;
         margin: 0;
     }
+
     .navigation-link {
         color: #fff;
         margin-right: 0;
         margin-bottom: 18px;
     }
+
     .navigation-link:last-child {
         margin-bottom: 0;
     }
