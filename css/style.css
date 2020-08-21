@@ -587,6 +587,15 @@ body {
         display: block;
         border: none;
     }
+
+    .film-trailer,
+    .poster {
+        width: 100%;
+    }
+
+    .film-trailer {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -629,6 +638,7 @@ body {
 
     .film-trailer {
         margin-bottom: 30px;
+        margin-right: auto;
     }
 
     .film-text {
@@ -666,4 +676,70 @@ body {
     .mobile-buttons {
         display: block;
     }
+
+    /*тест*
+
+    @keyframes m-menu-button {
+        to{
+            transform: rotate(90deg);
+        }
+    }
+
+    @keyframes arrow-1{
+        to {
+            transform: translate(-3px, 2px) rotate(-45deg);
+            width: 60%;
+        }
+    }
+    @keyframes arrow-2 {
+        to{
+            transform: translate(-3px, -2px) rotate(45deg);
+            width: 60%;
+
+        }
+    }
+    #switcher:checked~button .menu-line:first-child{
+        animation-name: arrow-1;
+        animation-duration: .7s;
+        animation-fill-mode: forwards;
+    }
+    #switcher:checked~button .m-menu-button{
+        animation-name: m-menu-button;
+        animation-duration: .7s;
+        animation-fill-mode: forwards;
+
+    }
+*/
+    /*тест 2
+
+
+    .m-menu-button{
+        margin: 1em;
+        width: 40px;
+    }
+
+    .m-menu-button:after,
+    .m-menu-button:before,
+    .m-menu-button div {
+        background-color: #000;
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 5px;
+        margin: 7px 0;
+        transition: all .2s ease-in-out;
+    }
+
+    .m-menu-button:hover:before {
+        transform: translateY(12px) rotate(135deg);
+    }
+
+    .m-menu-button:hover:after {
+        transform: translateY(-12px) rotate(-135deg);
+    }
+
+    .m-menu-button:hover div {
+        transform: scale(0);
+    }
+    */
 }
